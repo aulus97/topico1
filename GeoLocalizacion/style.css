@@ -1,0 +1,67 @@
+#map{
+    height: 400px;
+    width: 100%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.button{
+    padding: 0.5rem 1rem;
+    background-color: #ff8400;
+    border-radius: 10px;
+    width: fit-content;
+    color: black;
+    cursor: pointer;
+}
+
+dialog{
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    top: 20%;
+    left: 20%;
+    z-index: 1;
+}
+
+dialog::backdrop{
+    position: fixed;
+    background: #22222293;
+    z-index: 1;
+    width: 100vh;
+    height: 100vh;
+}
+
+dialog[open],
+#backdrop{
+    animation: fade-in 250ms forwards;
+}
+
+dialog[open].close-animate,
+dialog[open].close-animate{
+    animation: fade-out 250ms ;
+}
+
+@keyframes fade-in{
+    0%{
+        transform: translate(-50%,-10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out{
+    0%{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+    100%{
+        transform: translate(-50%,-10%);
+        opacity: 0;
+        display: none;
+    }
+}
