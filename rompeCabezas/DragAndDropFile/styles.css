@@ -1,0 +1,70 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.drop-area{
+    border: 6px dashed #f05a28;
+    padding: 20px;
+
+    margin-bottom: 20px;
+    cursor: pointer;
+    height: 100px;
+    display: grid;
+    justify-content: center;
+    width: 800px;
+
+    transition: border-color 0.3s ease-in-out;
+}
+
+.drop-area.drag-over{
+    border-color: #4caf50;
+}
+
+.buttonClass{
+    color: white;
+    background-color: #f05a28;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.file-list{
+    list-style: none;
+    padding: 0;
+}
+
+.file-item{
+    margin-bottom: 10px;
+}
+
+.file-icon{
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.icon-image::before{
+    content: '\1F5BC';
+}
+
+.icon-audio::before{
+    content: '\1F3B5';
+}
+
+.icon-video::before{
+    content: '\1F4F9';
+}
+
+.icon-pdf::before{
+    content: '\1F4D5';
+}
+
+.icon-generic::before{
+    content: '\1F4C1';
+}
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Audio y Video</title>
+</head>
+<body>
+    <h2>Reporductor de Audio</h2>
+    <audio src="audioPlayer" controls>
+        <source src="./multimedia/audio.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio
+    </audio>
+    <div>
+        <button>Reproducir/Pausar</button>
+    </div>
+
+    <h2>Reporductor de Video</h2>
+    <video src="videoPlayer" controls>
+        <source src="./multimedia/video.mp4" width="400" type="video/mp4">
+        Tu navegador no soporta el elemento de video
+    </video>
+    <div>
+        <button onclick="toogleVideo()">Reproducir/Pausar</button>
+        <button></button>
+    </div>
+    <script src="test2.js"></script>
+</body>
+</html>

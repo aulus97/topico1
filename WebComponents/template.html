@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Template HTML y JS puro</title>
+</head>
+<body>
+    <h1>Ejemplo  Template HTML y JS puro</h1>
+    <template id="miTempla">
+        <h2>Titulo templ</h2>
+        <p>Par templ</p>
+    </template>
+    <div id="container">
+
+    </div>
+    <script>
+        const template =document.getElementById('miTempla');
+        const container = document.getElementById('container');
+        const datos ={
+            {titulo: 'Tit 1', parrafro: 'Parr 1'}
+            {titulo: 'Tit 2', parrafro: 'Parr 2'}
+            {titulo: 'Tit 3', parrafro: 'Parr 3'}
+
+        };
+
+        datos.forEach(item => {
+            const clone = document.importNode(template.content,true);
+            clone,querySelector('h2').textContent = item.titulo;
+            clone,querySelector('p').textContent = item.parrafro;
+            container.appendChild(clone);
+        });
+    </script>
+</body>
+</html>

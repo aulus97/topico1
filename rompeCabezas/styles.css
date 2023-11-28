@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#puzzle-container{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-gap: 0px;
+}
+
+.puzzle-card{
+    height: 300px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    text-align: center;
+}
+
+.success-message{
+    display: none;
+    font-size: 18px;
+    color: green;
+    margin-top: 20px;
+}

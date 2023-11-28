@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="drop-container" id="dropContainer">
+    <div class="drop-area" id="dropArea">
+        <span>Arrastra y suelta aqui tus archivos</span>
+        <button id="fileInputBtn" class="buttonClass">Buscar archivos</button>
+        <input type="file" id="fileInput" multiple class="buttonClass">
+    </div>
+    <ul id="fileList" class="file-list"></ul>
+    <br><button id="saveButton" class="buttonClass">Guardar</button>
+   </div> 
+   <script src="script.js"></script>
+</body>
+</html>
