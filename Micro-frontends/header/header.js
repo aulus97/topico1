@@ -19,14 +19,12 @@ export class HeaderComponent extends HTMLElement {
 		  <nav>
 				<div class="cart-container">
 					<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/secundario">Secudaria</a></li>
+					    <li><a href="/">Home</a></li>
+					    <li><a href="/secundario">Secudaria</a></li>
 
-					<li><a href="/secundario"><img class="card" src="./header/img/cart-shopping.png" alt="Cart-Icon" style="width 30px"></img></a></li>
-					<span class="cart-counter">0</span>
-
+					    <li><a href="/secundario"><img class="card" src="./header/img/cart-shopping.png" alt="Cart-Icon" style="width 30px"></img></a></li>
+					    <span class="cart-counter">0</span> 
 					</ul>
-			
 				</div>				
 			</nav>
 		</header>
@@ -35,7 +33,8 @@ export class HeaderComponent extends HTMLElement {
 
 	#addToCartHandler(producto){
 		const cartCounter = this.shadowRoot.querySelector('.cart-counter');
-		const productosEnCarrito = LocalStorageService.obtenerProductosEnCarrito();
+        const productosEnCarrito = LocalStorageService.guardarProductosEnCarrito();
+        cartCounter.textContent = productosEnCarrito.lenght();
 	}
 	// Método privado para agregar los estilos al Shadow DOM.
 	#agregaEstilo(shadow) {

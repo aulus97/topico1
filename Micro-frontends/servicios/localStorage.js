@@ -4,5 +4,8 @@ export class LocalStorageService{
         localStorage.setItem("roductosEnCarrito", productosString)
     };
 
-    static
+    static obtenerProductosEnCarrito() {
+        const productosString = localStorage.getItem('productosEnCarrito');
+        return productosString ? JSON.parse(productosString) : [];
+    }
 }
