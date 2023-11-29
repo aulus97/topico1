@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,17 +12,25 @@
         Tu navegador no soporta el elemento de audio
     </audio>
     <div>
-        <button>Reproducir/Pausar</button>
+        <button onclick="toogleAudio()">Reproducir/Pausar</button>
+        <input id="volumenControl" onchange="setVolumen()" type="range" step="0.1" min="0" max="1" value="1">
+        <span id="currentTime">0:00</span>/<span id="duration">0:00</span>
+        <button onclick="seekBackward()">Retroceder 10s</button>
+        <button onclick="seekForward()">Avanzar 10s</button>
     </div>
 
     <h2>Reporductor de Video</h2>
     <video src="videoPlayer" controls>
-        <source src="./multimedia/video.mp4" width="400" type="video/mp4">
+        <source src="./multimedia/video.mp4" width="400" height="300" type="video/mp4">
         Tu navegador no soporta el elemento de video
     </video>
     <div>
         <button onclick="toogleVideo()">Reproducir/Pausar</button>
-        <button></button>
+        <input id="videoVolumenControl" onchange="setVideoVolumen()" type="range" step="0.1" min="0" max="1" value="1">
+        <span id="videoCurrentTime">0:00</span>/<span id="videoDuration">0:00</span>
+        <button onclick="videoSeekBackward()">Retroceder 10s</button>
+        <button onclick="videoSeekForward()">Avanzar 10s</button>
+
     </div>
     <script src="test2.js"></script>
 </body>

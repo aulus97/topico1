@@ -1,5 +1,5 @@
-var audio =document.getElementById("audioPlayer");
-var video =document.getElementById("videoPlayer");
+var audio = document.getElementById("audioPlayer");
+var video = document.getElementById("videoPlayer");
 var volumenControl = document.getElementById("volumenControl");
 var videoVolumenControl = document.getElementById("videovolumenControl");
 var currentTimeDisplay = document.getElementById("currentTime");
@@ -44,11 +44,18 @@ function videoSeekForward(){
     video.currentTime +=10;
 }
 
-audio.addEventListener("timeupdate",updateAudioTime);
+audio.addEventListener("timeupdate", updateAudioTime);
 
 function updateAudioTime(){
     currentTimeDisplay.textContent=formatTime(audio.currentTime);
     durationDisplay.textContent = formatTime(audio.duration);
+}
+
+video.addEventListener("timeupdate", updateVideoTime);
+
+function updateVideoTime() {
+    currentTimeDisplay.textContent = formatTime(video.currentTime);
+    durationDisplay.textContent = formatTime(video.duration);
 }
 
 function formatTime(time){
